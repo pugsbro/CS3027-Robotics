@@ -1,0 +1,2 @@
+robotics
+-DCATKIN_DEVEL_PREFIX=/home/pugs/Desktop/robotics/devel -DCMAKE_INSTALL_PREFIX=/home/pugs/Desktop/robotics/install -G Unix Makefiles

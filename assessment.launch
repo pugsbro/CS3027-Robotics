@@ -1,0 +1,17 @@
+<launch>
+  <param name="/use_sim_time" value="true"/>
+  <rosparam param="robot_start">[-4.8,-3.6,0]</rosparam>
+  <rosparam param="goal0">[-2,-2]</rosparam> <!-- easy -->
+  <rosparam param="goal1">[2.5,-4.15]</rosparam> <!-- a bit harder -->
+  <rosparam param="goal2">[-2.55,3.13]</rosparam> <!-- same as above -->
+  <rosparam param="goal3">[4.5,-3.5]</rosparam>  <!-- much harder -->
+  <rosparam param="goal4">[5.15,2]</rosparam> <!-- very hard -->
+  <node name="map_server" pkg="map_server" type="map_server" args="/home/pugs/Desktop/robotics/map.yaml" />
+  <node name="stage" pkg="stage_ros" type="stageros" args="/home/pugs/Desktop/robotics/map.world" />
+ 
+
+ <node name="dummy_localization" pkg="robotics" type="dummy_localization.py"/>  
+  <node name="fake_localization" pkg="fake_localization" type="fake_localization"/>  
+ 
+
+</launch>
